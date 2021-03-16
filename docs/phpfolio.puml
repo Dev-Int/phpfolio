@@ -1,0 +1,43 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+
+interface Portfolio {
+	create()
+	update()
+	delete()
+}
+'left to right direction
+class Bachelor {
+	title: string
+	subtitle: string
+	date: date
+	comment: string|null
+}
+class Experience {
+	company: string
+	title: string
+	duration: string|int
+	date: date
+}
+class Skill {
+	name: string
+	evaluation: integer
+}
+class Profile {
+	livingAddress: string
+	workingAddress: string
+	email: string
+	social: Social
+}
+class Social {
+	name: string
+	url: string
+}
+Portfolio <|-- Bachelor
+Portfolio <|-- Experience
+Portfolio <|-- Skill
+Portfolio <|-- Profile
+Portfolio <|-- Social
+Social <-- Profile
+@enduml
