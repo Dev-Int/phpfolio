@@ -1,0 +1,19 @@
+version: '3.7'
+
+services:
+  nginx:
+    image: nginx:1.18
+    tty: true
+    volumes:
+      - ./.docker/nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
+      - ./:/phpfolio
+    links:
+      - php
+    ports:
+      - 80:80
+
+  php:
+    image: php:7.4
+    tty: true
+    volumes:
+      - ./:/phpfolio
