@@ -2,13 +2,21 @@ version: '3.7'
 
 services:
   php-8-fpm:
-    image: php:8-fpm
+    build:
+      context: ./.docker/php
+      args:
+        - PHP_VERSION=8
+        - PROJECT_NAME=${PROJECT_NAME}
     tty: true
     volumes:
       - ./:/${PROJECT_NAME}
 
   php-7.4-fpm:
-    image: php:7.4-fpm
+    build:
+      context: ./.docker/php
+      args:
+        - PHP_VERSION=7.4
+        - PROJECT_NAME=${PROJECT_NAME}
     tty: true
     volumes:
       - ./:/${PROJECT_NAME}
