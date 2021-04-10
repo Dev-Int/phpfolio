@@ -1,0 +1,28 @@
+{
+    "name": "jasonbenett/phpfolio",
+    "description": "Phpfolio is a library facilitating the creation of a portfolio.",
+    "keywords": ["phpfolio", "What The Fabrik Community"],
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jason Benedetti",
+            "email": "jason.benedetti@live.fr"
+        },
+        {
+            "name": "What The Fabrik Community",
+            "homepage": "https://whatthefabrik.fr"
+        }
+    ],
+    "require": {
+        "php": " ^7.4|^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "JasonBenett\\Phpfolio\\": "src/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
